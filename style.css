@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
+body{
+    font-family: "Parkinsans", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.nav{
+    height: 70px;
+    width: 100%;
+    background-color: #468;
+    position: fixed;
+    top: 0;
+    color: #fff;
+}
+.flex{display: flex;}
+.beet{justify-content: space-between;}
+.anaround{justify-content: space-around;}
+.navtext{font-size: 20pt;}
+.cimg{
+    height: 50px;
+    width: 50px;
+    border: 1px solid #4680ff;
+    border-radius: 100px;
+    margin: 6px;
+    margin-right: 15px;
+}
