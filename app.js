@@ -16,11 +16,56 @@ function showLiveDateTime() {
 }
 setInterval(showLiveDateTime, 1000);
 showLiveDateTime();
- 
 
-fetch('https://cors-anywhere.herokuapp.com/https://ipapi.co/json/')
-  .then(response => response.json())
-  .then(data => {
-    console.log('Country:', data.country_name);
-  })
-  .catch(error => console.error('Error:', error));
+// country system bro 
+
+function opencountry(){
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(
+    (position) => {
+      const latitude = position.coords.latitude;
+      const longitude = position.coords.longitude;
+      console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
+      const countryName = getCountry(latitude, longitude);
+      console.log("Country:", countryName);
+      document.getElementById("countryshow").innerHTML = countryName;
+      document.getElementById('setloc').value = countryName;
+      thisunpkg(countryName);
+    },
+    (error) => {
+      var nowshow = document.getElementById("countryshow");
+      nowshow.innerHTML= `Allow getting location! `,error;
+    }
+  );
+} else {
+  var nowshow = document.getElementById("countryshow");
+  nowshow.innerHTML = "Geolocation is not supported by this browser.";
+}
+
+function getCountry(lat, lon) {
+  const countries = [
+    { name: "Bangladesh", minLat: 20.59, maxLat: 26.63, minLon: 88.01, maxLon: 92.67 },
+    { name: "Saudi Arabia", minLat: 16.0, maxLat: 32.2, minLon: 34.5, maxLon: 55.66 },
+    { name: "Dubai", minLat: 22.6, maxLat: 26.1, minLon: 51.6, maxLon: 56.4 },
+    { name: "Malaysia", minLat: 1.0, maxLat: 7.4, minLon: 100.0, maxLon: 119.0 }
+  ];
+
+  for (const country of countries) {
+    if (
+      lat >= country.minLat &&
+      lat <= country.maxLat &&
+      lon >= country.minLon &&
+      lon <= country.maxLon
+    ) {
+      return country.name;
+    }
+  }
+  return "Your Country isn't Allowed";
+}
+}
+opencountry();
+
+
+function thisunpkg(mycnt){
+document.getElementById('showflag').innerHTML=`<img src="/flag/${mycnt}.svg">`;
+}

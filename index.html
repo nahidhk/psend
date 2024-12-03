@@ -18,18 +18,35 @@
             </blockquote>
         </div>
         <div>
-            <div class="cimg"></div>
+            <div class="cimg">
+                <img src="/img/logo.gif" alt="Logo">
+            </div>
         </div>
     </div>
     <br><br><br>
-<center>
-    <h3>
-        <span style="color: #468;border: 1px solid red;" id="liveDateTime"></span>
-    </h3>
-</center>
+    <center>
+        <h3>
+          <span id="showflag"></span><br><span id="countryshow">Loadding...</span><br>
+            <span style="color: #468;border: 1px solid red;" id="liveDateTime"></span>
+        </h3>
+    </center>
 
+    <section class="flex center">
+        <div class="boxdz">
+            <center>
+                <input id="setloc" class="inputg" list="country" type="text" placeholder="Select country">
+                TO
+                <input class="inputg" type="text" value="Bangladesh">
+            </center>
+            <datalist id="country">
+                <option value="Saudi Arabia"></option>
+                <option value="United Arab Emirates (Dubai)"></option>
+                <option value="Malaysia"></option>
+            </datalist>
+        </div>
+    </section>
 
-<script src="app.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
