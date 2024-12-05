@@ -1,105 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <link rel="shortcut icon" href="/img/Psend Logo.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Psend</title>
+    <title>Login || Page</title>
 </head>
-
 <body>
-    <!-- Psend mobile nav -->
-    <div class="nav flex beet">
-        <div>
-            <blockquote>
-                <span class="navtext">Psend</span>
-            </blockquote>
-        </div>
-        <div>
-            <div class="cimg">
-                <img src="/img/logo.gif" alt="Logo">
-            </div>
-        </div>
-    </div>
-    <br><br><br>
-    <center>
-        <h3>
-            <span id="showflag"></span><br><span id="countryshow">Loadding...</span><br>
-            <span style="color: #468;border: 1px solid red;" id="liveDateTime"></span>
-        </h3>
-    </center>
-
-    <section class="flex center">
-        <div class="boxdz">
-            <center>
-                <input id="setloc" class="inputg" list="country" type="text" placeholder="Select country">
-                TO
-                <input class="inputg" type="text" value="Bangladesh">
-            </center>
-            <datalist id="country">
-                <option value="Saudi Arabia"></option>
-                <option value="United Arab Emirates (Dubai)"></option>
-                <option value="Malaysia"></option>
-            </datalist>
-        </div>
-    </section>
-
+    <br><br><br><br>
+   <section class="flex anaround">
+    <div class="popup">
+<center>
+    <h3>login</h3>
+    <input id="pin" class="input" type="number" placeholder="input your pin"><br>
     <br>
-
-    <section class="flex anaround">
-        
-        <div class="tabelbox">
-            <div class="pendbox">
-            <center>
-                customers
-            </center>
-            </div>
-            <div style="overflow: scroll;">
-            <table class="minimalistBlack">
-                <thead>
-                    <tr>
-                        <th>T.ID</th>
-                        <th>Status</th>
-                        <th>Name</th>
-                        <th>Date</th>
-                       <th>C>A> Cash</th>
-                       <th>BD Taka</th>
-                       <th>C send</th>
-                       <th>Admin</th>
-                    </tr>
-                </thead>
-                <tbody>
-                   <tr>
-                    <td>1</td>
-                    <td><button style="border: none;background-color: coral;color: #fff; border-radius: 4px;">Confrom</button></td>
-                    <td>nahidhk</td>
-                    <td>20/10/2024</td>
-                    <td>100</td>
-                    <td>200</td>
-                    <td>300</td>
-                    <td><img style="height: 40px;width: 40px;border-radius: 100px;border: 1px solid #4680ff;" src="/img/PsendLogo.gif"></td>
-                   </tr>
-                   <tr>
-                    <td>1</td>
-                    <td><button style="border: none;background-color: coral;color: #fff; border-radius: 4px;">Confrom</button></td>
-                    <td>nahidhk</td>
-                    <td>20/10/2024</td>
-                    <td>100</td>
-                    <td>200</td>
-                    <td>300</td>
-                    <td><img style="height: 40px;width: 40px;border-radius: 100px;border: 1px solid #4680ff;" src="/img/PsendLogo.gif"></td>
-                   </tr>
-                </tbody>
-            </table>
-        </div>
-        </div>
-    </section>
-
-
-
-    <script src="app.js"></script>
+    <button onclick="loginapp()" class="btnlg">login</button>
+</center>
+    </div>
+   </section> 
+   <script src="log.call.js"></script>
 </body>
-
 </html>

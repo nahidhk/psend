@@ -124,3 +124,24 @@ table.minimalistBlack {
     background: #eaeaea;
     border-bottom: 0px solid #000000;
   } 
+.btnlg{
+    width: 90%;
+    border-radius: 6px;
+    height: 35px;
+    background-color: #f37106;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.btnlg:active{
+width: 88%;
+height: 32px;
+}
+.popup{
+   height: auto;
+   padding: 10px;
+    width: 300px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 5px 0 #000;
+    border-radius: 10px;
+}
