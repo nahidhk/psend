@@ -31,6 +31,7 @@ if (navigator.geolocation) {
       document.getElementById("countryshow").innerHTML = countryName;
       document.getElementById('setloc').value = countryName;
       thisunpkg(countryName);
+      cruncy()
     },
     (error) => {
       var nowshow = document.getElementById("countryshow");
@@ -64,8 +65,55 @@ function getCountry(lat, lon) {
 }
 }
 opencountry();
-
-
 function thisunpkg(mycnt){
 document.getElementById('showflag').innerHTML=`<img src="/flag/${mycnt}.svg">`;
+// icon 
+if (mycnt === "Bangladesh") {
+  sessionStorage.setItem('cicon','BDT')
+}
+if (mycnt === "Saudi Arabia") {
+  sessionStorage.setItem('cicon','SR')
+}
+if (mycnt === "Dubai") {
+  sessionStorage.setItem('cicon','DH')
+}
+if (mycnt === "Malaysia") {
+  sessionStorage.setItem('cicon','MYR')
+}
+// bangla name
+if (mycnt === "Bangladesh") {
+  sessionStorage.setItem('bname','টাকা')
+}
+if (mycnt === "Saudi Arabia") {
+  sessionStorage.setItem('bname','রিয়াল')
+}
+if (mycnt === "Dubai") {
+  sessionStorage.setItem('bname','দিরহাম')
+}
+if (mycnt === "Malaysia") {
+  sessionStorage.setItem('bname','রিঙ্গিত')
+}
+// english  name
+if (mycnt === "Bangladesh") {
+  sessionStorage.setItem('ename','Taka')
+}
+if (mycnt === "Saudi Arabia") {
+  sessionStorage.setItem('ename','Riyal')
+}
+if (mycnt === "Dubai") {
+  sessionStorage.setItem('ename','Dirham')
+}
+if (mycnt === "Malaysia") {
+  sessionStorage.setItem('ename','Ringgit')
+}
+}
+
+
+
+
+// lad a cranache name of 
+
+function cruncy(){
+  const bname = document.sessionStorage("bname");
+  document.getElementById("showbname").innerHTML=bname;
 }
