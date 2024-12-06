@@ -1,0 +1,6 @@
+[
+    { "code": "BDT", "price": 1, "flag": "/flag/Bangladesh.svg" },
+    { "code": "AED", "price": 32, "flag": "/flag/Dubai.svg" },
+    { "code": "SAR", "price": 31, "flag": "/flag/Saudi Arabia.svg" },
+    { "code": "MYR", "price": 28, "flag": "/flag/Malaysia.svg" }
+]

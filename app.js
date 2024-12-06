@@ -31,7 +31,6 @@ if (navigator.geolocation) {
       document.getElementById("countryshow").innerHTML = countryName;
       document.getElementById('setloc').value = countryName;
       thisunpkg(countryName);
-      cruncy()
     },
     (error) => {
       var nowshow = document.getElementById("countryshow");
@@ -72,10 +71,10 @@ if (mycnt === "Bangladesh") {
   sessionStorage.setItem('cicon','BDT')
 }
 if (mycnt === "Saudi Arabia") {
-  sessionStorage.setItem('cicon','SR')
+  sessionStorage.setItem('cicon','SAR')
 }
 if (mycnt === "Dubai") {
-  sessionStorage.setItem('cicon','DH')
+  sessionStorage.setItem('cicon','AED')
 }
 if (mycnt === "Malaysia") {
   sessionStorage.setItem('cicon','MYR')
@@ -106,14 +105,4 @@ if (mycnt === "Dubai") {
 if (mycnt === "Malaysia") {
   sessionStorage.setItem('ename','Ringgit')
 }
-}
-
-
-
-
-// lad a cranache name of 
-
-function cruncy(){
-  const bname = document.sessionStorage("bname");
-  document.getElementById("showbname").innerHTML=bname;
 }

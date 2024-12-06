@@ -13,29 +13,35 @@
     <br>
     <section class="flex anaround">
         <div>
-            <h3>
-                <span id="showflag"></span><br><span id="countryshow">Loadding...</span><br>
-                <span style="color: #468;border: 1px solid red;" id="liveDateTime"></span>
-            </h3>
-            <blockquote>
-                <h1>Calculator</h1>
-            </blockquote>
+            <center>
+                <h3>Calculator</h3>
+                <hr>
+            </center>
             <form action="" method="post">
 
 
-                <label for="">Currencies</label><br>
-                <input class="input" type="text" name="" id=""><br>
+                <label for="">Currencies<n>*</n></label><br>
+                <div class="cubox">
+                    <input class="" value="100" type="text" name="" id="price" required>
+                    <img id="showflag"  alt="">
+                    <select name="" id="currency">
+                        <option value="AED">AED</option>
+                        <option value="BDT">BDT</option>
+                        <option value="SAR">SAR</option>
+                        <option value="MYR">MYR</option>
+                    </select>
+                </div>
+
+                <label for=""><span id="showbname">Loading</span>
+                    <n>*</n>
+                </label><br>
+                <input oninput="calculatorio()" class="input" type="number" name="" id="cpt" required><br>
 
 
-                <label for=""><span id="showbname">Loading</span></label><br>
-                <input class="input" type="text" name="" id=""><br>
-
-
-                <label for="">Bangladeshi Taka</label><br>
-                <input class="input" type="text" name="" id=""><br>
-
-
-
+                <label for="">বাংলাদেশি টাকা<n>*</n></label><br>
+                <input class="input" type="number" name="" id="bdt" required><br>
+                <br>
+                <div class="btnx">Next</div>
 
             </form>
         </div>
@@ -45,7 +51,7 @@
 
 
     <script src="login.js"></script>
-    <script src="app.js"></script>
+    <script src="psend.js"></script>
 </body>
 
 </html>
