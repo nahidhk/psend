@@ -31,6 +31,11 @@ if (navigator.geolocation) {
       document.getElementById("countryshow").innerHTML = countryName;
       document.getElementById('setloc').value = countryName;
       thisunpkg(countryName);
+      const shbtn = document.getElementById('shbtn');
+      shbtn.addEventListener("click", sendio);
+      shbtn.className = "btnlg";
+      shbtn.innerHTML = `Tap To Send <i class="fa-regular fa-paper-plane"></i>`;
+      
     },
     (error) => {
       var nowshow = document.getElementById("countryshow");
@@ -105,4 +110,10 @@ if (mycnt === "Dubai") {
 if (mycnt === "Malaysia") {
   sessionStorage.setItem('ename','Ringgit')
 }
+}
+
+
+
+function sendio(){
+  window.location.href='psend.html'
 }

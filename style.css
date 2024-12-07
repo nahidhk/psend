@@ -189,3 +189,20 @@ select {
     font-size: 15pt;
     width: 100px;
 }
+.vcc{
+    display: none;
+}
+.card{
+    height: 80px;
+    width: 140px;
+    background-color: #fff;
+    margin: 10px;
+    border: 1px solid #000;
+    border-radius: 8px;
+    display: flex;
+    align-items: stretch;
+    cursor: pointer;
+}
+.active{
+    border: 3px solid #4680ff;
+}

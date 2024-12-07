@@ -18,38 +18,48 @@
                 <hr>
             </center>
             <form action="" method="post">
-
-
-                <label for="">Currencies<n>*</n></label><br>
-                <div class="cubox">
-                    <input class="" value="100" type="text" name="" id="price" required>
-                    <img id="showflag"  alt="">
-                    <select name="" id="currency">
-                        <option value="AED">AED</option>
-                        <option value="BDT">BDT</option>
-                        <option value="SAR">SAR</option>
-                        <option value="MYR">MYR</option>
-                    </select>
+                <div id="next1">
+                    <label for="">Currencies<n>*</n></label><br>
+                    <div class="cubox">
+                        <input class="" value="" type="text" name="" id="price" required>
+                        <img id="showflag" alt="">
+                        <select onchange="ifcall()" name="" id="currency">
+                            <option value="AED">AED</option>
+                            <option value="BDT">BDT</option>
+                            <option value="SAR">SAR</option>
+                            <option value="MYR">MYR</option>
+                        </select>
+                    </div>
+                    <label for=""><span id="showbname">Loading...</span>
+                        <n>*</n>
+                    </label><br>
+                    <input oninput="calculatorio()" class="input" type="number" name="" id="cpt" required><br>
+                    <label for="">বাংলাদেশি টাকা<n>*</n></label><br>
+                    <input class="input" type="number" name="" id="bdt" required><br>
+                    <br>
+                    <div class="btnx" id="nextbtn1" onclick="next1()">Next</div>
                 </div>
-
-                <label for=""><span id="showbname">Loading</span>
-                    <n>*</n>
-                </label><br>
-                <input oninput="calculatorio()" class="input" type="number" name="" id="cpt" required><br>
-
-
-                <label for="">বাংলাদেশি টাকা<n>*</n></label><br>
-                <input class="input" type="number" name="" id="bdt" required><br>
-                <br>
-                <div class="btnx">Next</div>
-
+                <div id="next2" class="vcc">
+                    <center>
+                        <h3>Both Methods</h3>
+                        <hr>
+                    </center>
+                    <div class="flex beet">
+                        <div id="bkash" onclick="methods('bkash')" class="card">
+                            <img src="img/bkash.svg" alt="">
+                        </div>
+                        <div id="nagad" onclick="methods('nagad')" class="card">
+                            <img src="img/nagad.svg" alt="">
+                        </div>
+                    </div>
+                   <div>
+                    <label for=""><span id="outputmethod">Select any Methods</span><n>*</n></label><br>
+                    <input oninput="typeaccount()"  style="width: 90%;" class="cubox input" placeholder="Type account number" type="number">
+                   </div>
+                </div>
             </form>
         </div>
     </section>
-
-
-
-
     <script src="login.js"></script>
     <script src="psend.js"></script>
 </body>

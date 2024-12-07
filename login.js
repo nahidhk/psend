@@ -3,7 +3,7 @@ function loginverinno(){
     if (rioap === 'true') {
         
     } else {
-        window.location.href="/index.html"
+        window.location.href="/index.php"
     }
 }
 loginverinno();
