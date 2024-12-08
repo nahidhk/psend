@@ -106,7 +106,7 @@ $conn->close();
             <div style="height: 15px; width: 30px; background-color: #000;"></div>
             <hr>
             <br><br><br>
-            <center> <button onclick="window.location.href='/'">GO Back</button> <button
+            <center> <button onclick="window.location.href='/home.php'">GO Back</button> <button
                     onclick="print()">Print</button></center>
         </div>
     </section>

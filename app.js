@@ -41,6 +41,9 @@ function opencountry() {
       (error) => {
         var nowshow = document.getElementById("countryshow");
         nowshow.innerHTML = `Allow getting location! `, error;
+        alert("Error Allow getting location!\n Go Back And Try agin!")
+        window.location.href='/';
+        sessionStorage.clear();
       }
     );
   } else {
