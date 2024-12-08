@@ -165,7 +165,7 @@ label {
 
 .btnx {
     text-align: center;
-    width: 93%;
+    width: 100px;
     background-color: orangered;
     color: #fff;
     padding: 7px;
@@ -175,7 +175,7 @@ label {
 .cubox {
     border: 1px solid #4680ff;
     padding: 10px;
-    width: auto;
+    width: 200px;
     border-radius: 10px;
     margin: 5px;
     display: flex;
@@ -205,4 +205,11 @@ select {
 }
 .active{
     border: 3px solid #4680ff;
+}
+.false{
+    height: 2px;
+    width: 2px;
+    border-radius: 100px;
+    color: #fff;
+    border: #fff;
 }

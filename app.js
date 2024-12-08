@@ -71,6 +71,7 @@ function getCountry(lat, lon) {
 opencountry();
 function thisunpkg(mycnt){
 document.getElementById('showflag').innerHTML=`<img src="/flag/${mycnt}.svg">`;
+sessionStorage.setItem('country',mycnt);
 // icon 
 if (mycnt === "Bangladesh") {
   sessionStorage.setItem('cicon','BDT')

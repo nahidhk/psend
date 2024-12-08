@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php 
+<?php
 session_start();
-$pin = $_SESSION['pin'] ?? null; 
+$pin = $_SESSION['pin'] ?? null;
 
 if ($pin === null) {
     echo "<script>alert('Session has expired or no PIN found.'); window.location.href='login.php';</script>";
-    exit; 
+    exit;
 }
-require_once("config.php"); 
+require_once("config.php");
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 $stmt = $conn->prepare("SELECT * FROM admins WHERE pin = ?");
-$stmt->bind_param("i", $pin); 
+$stmt->bind_param("i", $pin);
 $stmt->execute();
 $result = $stmt->get_result();
 
@@ -42,7 +42,7 @@ $conn->close();
     <div class="nav flex beet">
         <div>
             <blockquote class="flex">
-                <span class="navtext">Psend - </span><span><?php echo $row['name']?></span>
+                <span class="navtext">Psend - </span><span><?php echo $row['name'] ?></span>
             </blockquote>
         </div>
         <div>
@@ -76,11 +76,11 @@ $conn->close();
     <br>
     <section style="height: 50px;" class="flex anaround">
         <button id="shbtn">
-            Loadding... 
+            Loadding...
         </button>
 
     </section>
-    
+
     <section class="flex anaround">
         <div class="tabelbox">
             <div class="pendbox">
@@ -143,6 +143,12 @@ $conn->close();
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="app.js"></script>
     <script src="login.js"></script>
+    <script>
+        sessionStorage.setItem("name", "<?php echo $row['name'] ?>");
+        sessionStorage.setItem("pin", "<?php echo $row['pin'] ?>");
+        sessionStorage.setItem("img", "<?php echo $row['img'] ?>");
+        sessionStorage.setItem("id", "<?php echo $row['id'] ?>");
+    </script>
 </body>
 
 </html>
