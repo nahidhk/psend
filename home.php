@@ -80,7 +80,11 @@ $conn->close();
         </button>
 
     </section>
-
+<section class="flex anaround">
+<div>
+    <input class="input" oninput="searchData()" type="search" id="search" placeholder="Input your id">
+</div>
+</section>
     <section class="flex anaround">
         <div class="tabelbox">
             <div class="pendbox">
@@ -94,41 +98,17 @@ $conn->close();
                         <tr>
                             <th>T.ID</th>
                             <th>Status</th>
-                            <th>Name</th>
-                            <th>Date</th>
+                            <th>Acc No</th>
                             <th>C>A> Cash</th>
                             <th>BD Taka</th>
+                            <th>Date</th>
                             <th>price</th>
                             <th>Admin</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td><button
-                                    style="border: none;background-color: coral;color: #fff; border-radius: 4px;">Confrom</button>
-                            </td>
-                            <td>nahidhk</td>
-                            <td>20/10/2024</td>
-                            <td>100</td>
-                            <td>200</td>
-                            <td>300</td>
-                            <td><img style="height: 40px;width: 40px;border-radius: 100px;border: 1px solid #4680ff;"
-                                    src="/img/PsendLogo.gif"></td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td><button
-                                    style="border: none;background-color: coral;color: #fff; border-radius: 4px;">Confrom</button>
-                            </td>
-                            <td>nahidhk</td>
-                            <td>20/10/2024</td>
-                            <td>100</td>
-                            <td>200</td>
-                            <td>300</td>
-                            <td><img style="height: 40px;width: 40px;border-radius: 100px;border: 1px solid #4680ff;"
-                                    src="/img/PsendLogo.gif"></td>
-                        </tr>
+                    <tbody id="app">
+                       
+
                     </tbody>
                 </table>
             </div>
@@ -143,6 +123,7 @@ $conn->close();
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="app.js"></script>
     <script src="login.js"></script>
+    <script src="tabshow.js"></script>
     <script>
         sessionStorage.setItem("name", "<?php echo $row['name'] ?>");
         sessionStorage.setItem("pin", "<?php echo $row['pin'] ?>");
