@@ -189,10 +189,12 @@ select {
     font-size: 15pt;
     width: 100px;
 }
-.vcc{
+
+.vcc {
     display: none;
 }
-.card{
+
+.card {
     height: 80px;
     width: 140px;
     background-color: #fff;
@@ -203,13 +205,31 @@ select {
     align-items: stretch;
     cursor: pointer;
 }
-.active{
+
+.active {
     border: 3px solid #4680ff;
 }
-.false{
+
+.false {
     height: 2px;
     width: 2px;
     border-radius: 100px;
     color: #fff;
     border: #fff;
 }
+
+.btn {
+    padding: 10px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.darkside {
+    height: 100vh;
+    width: 100%;
+    background-color: #00000053;
+    position: fixed;
+    top: 0;
+}
+
+/* tanasforam */

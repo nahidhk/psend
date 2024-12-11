@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+</head>
+
+<body>
+    <div class="nav flex beet">
+        <div>
+            <blockquote class="flex">
+                <span class="navtext">Psend Admin Panel</span>
+            </blockquote>
+        </div>
+        <div>
+
+        </div>
+    </div>
+    <br><br><br><br>
+    <!-- tools this bro -->
+    <section class="flex anaround">
+        <div>
+            <div onclick="document.getElementById('popup').style.display='block'" style="background-color: #4680ff; text-align: center;" class="btn"><i
+                    class="fa-solid fa-comments-dollar"></i> Payments</div>
+            <select class="input" onchange="searchData()" name="" id="search">
+                <option value="">All</option>
+            </select>
+        </div>
+    </section>
+    <section id="popup" class="darkside vcc">
+        <br><br><br><br>
+        <div>
+            <center>
+                <div class="popup" style="padding: 20px;">
+                    <h3 style="margin: 0;">Pay</h3>
+                    <span style="color: red;" id="myerror"></span>
+                    <p>
+                        Acc NO : <span id="myaccno"><i>NULL</i></span> <br>
+                        CPT : <span id="mycpt"><i>NULL</i></span> <br>
+                        Date : <span id="mydate"><i>NULL</i></span>
+                    </p>
+                     
+                    <form action="saveacc.php" method="post">
+                        <input oninput="ckidnx()" class="input" name="id" id="myid" type="number" placeholder="Input the ID *" required><br>
+                        <input class="input" type="text" id="fixprice" placeholder="Total BDT *" required><br>
+
+                        <input oninput="dueck()" class="input" id="sendbdt" name="sendbdt" type="text"
+                            placeholder="Send BDT *" required><br>
+
+                        <input class="input" id="sendaccno" name="sendaccno" type="number"
+                            placeholder="Account Number (postinol)"><br>
+
+                        <input class="input" id="deubdt" name="duebdt" type="text" placeholder="Due *" required><br>
+
+                        <input class="input" id="trx" name="trx" type="text"
+                            placeholder="Trx & Last Number"><br>
+                        <select name="typex" id="typex" class="input">
+                            <option>Cash OUT</option>
+                            <option>Send Moneay</option>
+                        </select><br><br>
+                        <button class="btnlg">Save</button>
+                    </form>
+                    <br><button onclick="window.location.href='/admin/admin.html'">close</button>
+                    <br>
+                </div>
+            </center>
+
+        </div>
+    </section>
+    <section class="flex anaround">
+        <div style="width: 95%;">
+            <div class="pendbox">
+                <center>
+                    Order List
+                </center>
+            </div>
+            <div style="overflow: scroll;">
+                <table class="minimalistBlack">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>T.ID</th>
+                            <th>Acc No</th>
+                            <th>C>A> Cash</th>
+                            <th>BD Taka</th>
+                            <th>Fee</th>
+                            <th>Date</th>
+                            <th>this send pool</th>
+                            <th>Admin</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="app">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- script -->
+    <script src="adminck.js"></script>
+    <script src="tapshow.js"></script>
+</body>
+
+</html>
