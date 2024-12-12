@@ -232,4 +232,10 @@ select {
     top: 0;
 }
 
+.btng {
+    padding: 20px;
+    font-size: 17pt;
+    cursor: pointer;
+}
+
 /* tanasforam */

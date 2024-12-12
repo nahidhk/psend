@@ -1,5 +1,4 @@
 async function displayData(searchInput = "") {
-
     try {
         const response = await fetch("/src/psend.php");
         const data = await response.json();
@@ -7,76 +6,68 @@ async function displayData(searchInput = "") {
         if (!dataContainer) {
             throw new Error("Element with id 'app' not found.");
         }
-
         dataContainer.innerHTML = "";
-
-
-        const filteredData = data.filter(
-            (item) =>
-                item.adminpin.toLowerCase().includes(searchInput.toLowerCase())
+        const filteredData = data.filter((item) =>
+            (item.adminpin || "").toLowerCase().includes(searchInput.toLowerCase()) ||
+            (item.transition || "").toLowerCase().includes(searchInput.toLowerCase()) ||
+            (item.methoads || "").toLowerCase().includes(searchInput.toLowerCase()) ||
+            (item.postdate || "").toLowerCase().includes(searchInput.toLowerCase()) ||
+            (item.sendaccno || "").toLowerCase().includes(searchInput.toLowerCase()) ||
+            (item.statust || "").toLowerCase().includes(searchInput.toLowerCase()) ||
+            (item.currency || "").toLowerCase().includes(searchInput.toLowerCase()) ||
+            (item.id || "").toLowerCase().includes(searchInput.toLowerCase()) || 
+            (item.accno || "").toLowerCase().includes(searchInput.toLowerCase()) || 
+            (item.typex || "").toLowerCase().includes(searchInput.toLowerCase())
         );
-
-
-
         filteredData.forEach((item) => {
-
             const itemElement = document.createElement("tr");
             itemElement.innerHTML = `
-   <tr>
-                            <td>${item.id}</td>
-                            <td>${item.transition}</td>
-                            <td>${item.methoads} <br> ${item.accno}</td>
-                            <td>${item.cpt}  ${item.currency}</td>
-                            <td>${item.bdt} BDT</td>
-                            <td>${item.fee} BDT</td>
-                            <td>${item.postdate}</td>
-                            <td>send BDT : ${item.sendbdt} BDT <br> Due BDT : ${item.duebdt} BDT <br> send acc no : ${item.sendaccno} <br> type :
-                                ${item.typex} <br> t.id : ${item.trx}
-                            </td>
-                            <td >
-                                <div style="display: flex;">
-                                <div>
-                                    <img style="height: 60px;width: 60px;border: 1px solid #4680ff;" src="/img/${item.adminimg}">  
-                                </div>
-                                <div>
-                                   Name: ${item.adminname} <br>
-                                   Code : ${item.adminpin} <br>
-                                  <br>
-                                   Post :${item.postdate} 
-                                </div>
-                            </div>
-                            </td>
-                            <td>
-                               <div style="display: flex; justify-content: space-around;">
-                                <div style="background-color:#${item.statuscolor};" class="btn">${item.statust}..</div>
-                                <div onclick="window.location.href='/'" style="background-color: #ff1410;" class="btn"><i class="fa-solid fa-xmark"></i></div>
-                                <div onclick="window.location.href='/'" style="background-color: #4680ff;" class="btn" ><i class="fa-solid fa-check"></i></div>
-                                <div onclick="window.location.href='/'" style="background-color: #ff0400;" class="btn"><i class="fa-solid fa-trash-can"></i></div>
-                                <div onclick="window.location.href='/'" style="background-color: #be3735;" class="btn"><i class="fa-solid fa-ban"></i></div>
-
-                               </div> 
-                            </td>
-                        </tr>
-              `;
-
+                <td>${item.id}</td>
+                <td>${item.transition}</td>
+                <td>${item.methoads} <br> ${item.accno}</td>
+                <td>${item.cpt}  ${item.currency}</td>
+                <td>${item.bdt} BDT</td>
+                <td>${item.fee} BDT</td>
+                <td>${item.postdate}</td>
+                <td>send BDT : ${item.sendbdt} BDT <br> Due BDT : ${item.duebdt} BDT <br> send acc no : ${item.sendaccno} <br> type :
+                    ${item.typex} <br> t.id : ${item.trx}
+                </td>
+                <td >
+                    <div style="display: flex;">
+                        <div>
+                            <img style="height: 60px;width: 60px;border: 1px solid #4680ff;" src="/img/${item.adminimg}">  
+                        </div>
+                        <div>
+                           Name: ${item.adminname} <br>
+                           Code : ${item.adminpin} <br>
+                          <br>
+                           Post :${item.postdate} 
+                        </div>
+                    </div>
+                </td>
+                <td>
+                   <div style="display: flex; justify-content: space-around;">
+                    <div style="background-color:#${item.statuscolor};" class="btn">${item.statust}..</div>
+                    <div onclick="window.location.href='/'" style="background-color: #ff1410;" class="btn"><i class="fa-solid fa-xmark"></i></div>
+                    <div onclick="window.location.href='/'" style="background-color: #4680ff;" class="btn" ><i class="fa-solid fa-check"></i></div>
+                    <div onclick="window.location.href='/'" style="background-color: #ff0400;" class="btn"><i class="fa-solid fa-trash-can"></i></div>
+                    <div onclick="window.location.href='/'" style="background-color: #be3735;" class="btn"><i class="fa-solid fa-ban"></i></div>
+                   </div> 
+                </td>
+            `;
             dataContainer.appendChild(itemElement);
         });
     } catch (error) {
-        console.error("data error", error);
+        console.error("Data error:", error);
     }
 }
 
-
 function searchData() {
-    const searchInput1 = document.querySelector("#search").value;
-    displayData(searchInput1);
-    window.location.href = "#" + searchInput1;
+const serachdata1 =  document.getElementById('search').value;
+const serachdata2 =  document.getElementById('search1').value;
+displayData(serachdata1 + serachdata2);
 }
-
 displayData();
-
-
-
 function adminser() {
     const jsonFileUrl = '/src/admin.php';
     fetch(jsonFileUrl)
