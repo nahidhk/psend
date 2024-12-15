@@ -19,6 +19,7 @@ function calculatorio() {
 function ifcall() {
     document.getElementById('cpt').value = "";
     document.getElementById('bdt').value = "";
+    document.getElementById("updateio").innerHTML = '';
 }
 function cruncyapp() {
     let jsondata = [];
@@ -34,18 +35,17 @@ function cruncyapp() {
             totalcal();
         })
         .catch(error => console.error("There was a problem with the fetch operation:", error));
-
     function totalcal() {
         const inputcode = document.getElementById("currency").value;
         const outputprice = document.getElementById('price');
         const showflag = document.getElementById("showflag");
         const bname = document.getElementById("showbname");
         const selectedData = jsondata.find(item => item.code === inputcode);
-
         if (selectedData) {
             outputprice.value = selectedData.price;
             showflag.src = selectedData.flag;
             bname.innerHTML = selectedData.bname;
+            document.getElementById('updateio').innerHTML = selectedData.updatex;
 
         } else {
             outputprice.value = "";
@@ -72,13 +72,13 @@ function methods(calldata) {
     const outputmethod = document.getElementById("outputmethod");
     const smethod = document.getElementById('smethod');
     if (calldata === "bkash") {
-        smethod.value=calldata;
+        smethod.value = calldata;
         bkash.classList = "card active";
         nagad.classList = "card";
         outputmethod.innerHTML = "Input Bkash Number"
     }
     if (calldata === "nagad") {
-        smethod.value=calldata;
+        smethod.value = calldata;
         nagad.classList = "card active";
         bkash.classList = "card";
         outputmethod.innerHTML = "Input Nagad Number"
@@ -87,29 +87,29 @@ function methods(calldata) {
 function typeaccount() {
     const bkash = document.getElementById('bkash').classList;
     const nagad = document.getElementById('nagad').classList;
-    if (bkash.contains("active") || nagad.contains("active")) {  
-       
+    if (bkash.contains("active") || nagad.contains("active")) {
+
     } else {
         alert("Error! You have not selected both methods.");
     }
 }
-function countrysho(){
-   const thiscontry =  sessionStorage.getItem('country');
-  const countrysho =  document.getElementById('countrysho');
-  countrysho.value = thiscontry;
+function countrysho() {
+    const thiscontry = sessionStorage.getItem('country');
+    const countrysho = document.getElementById('countrysho');
+    countrysho.value = thiscontry;
 }
 
-function psendmony(){
+function psendmony() {
     // stroge
-const adminname = sessionStorage.getItem("name");
-const adminpin = sessionStorage.getItem("pin");
-const adminimg = sessionStorage.getItem("img");
-const adminid = sessionStorage.getItem("id");
-// element
-document.getElementById('adminpin').value = adminpin;
-document.getElementById('adminname').value = adminname;
-document.getElementById('adminid').value= adminid;
- document.getElementById('adminimg').value = adminimg;
+    const adminname = sessionStorage.getItem("name");
+    const adminpin = sessionStorage.getItem("pin");
+    const adminimg = sessionStorage.getItem("img");
+    const adminid = sessionStorage.getItem("id");
+    // element
+    document.getElementById('adminpin').value = adminpin;
+    document.getElementById('adminname').value = adminname;
+    document.getElementById('adminid').value = adminid;
+    document.getElementById('adminimg').value = adminimg;
 
 }
 document.addEventListener("DOMContentLoaded", psendmony);

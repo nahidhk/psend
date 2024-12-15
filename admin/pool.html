@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psend Admin</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <br><br>
+    <section class="flex anaround">
+        <div class="popup">
+            <center>
+                <h3>Price Poll</h3>
+                <form action="pool.php" method="post">
+                    <label for="">CPT<n>*</n></label><br>
+                    <input name="id" oninput="idtest()" id="idtest" type="number" class="input" placeholder="input the id" required>
+                    <br>
+                    <label for="">[1] CPT Price<n>*</n></label>
+                    <input name="cpt" type="text" class="input" placeholder="0.00" required>
+                    <table class="minimalistBlack">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Cruncry</th>
+                                <th>CPT price</th>
+                                <th>Last Update</th>
+                            </tr>
+                        </thead>
+                        <tbody id="app">
+                        </tbody>
+                    </table>
+                    <br>
+                    <button class="btnlg">Save CPT</button>
+                </form>
+                <button onclick="window.location.href='/admin/admin.html'">Home</button>
+
+            </center>
+        </div>
+    </section>
+    <script src="poll.js"></script>
+    <script src="adminck.js"></script>
+    <script>
+        function idtest() {
+            const idtest = document.getElementById('idtest').value;
+            if (idtest === 5 || idtest === 6 || idtest === 7 || idtest === 8 || idtest === 9) {
+                document.getElementById('idtest').style.border = '1px solid red';
+            } else {
+                document.getElementById('idtest').style.border = '1px solid ';
+            }
+        }
+    </script>
+    
+</body>
+
+</html>
