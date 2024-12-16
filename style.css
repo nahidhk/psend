@@ -227,9 +227,10 @@ select {
 .darkside {
     height: 100vh;
     width: 100%;
-    background-color: #00000053;
+    background-color: #00000073;
     position: fixed;
     top: 0;
+    backdrop-filter: blur(8px);
 }
 
 .btng {

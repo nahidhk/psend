@@ -80,11 +80,11 @@ $conn->close();
         </button>
 
     </section>
-<section class="flex anaround">
-<div>
-    <input class="input" oninput="searchData()" type="search" id="search" placeholder="Input your id">
-</div>
-</section>
+    <section class="flex anaround">
+        <div>
+            <input class="input" oninput="searchData()" type="search" id="search" placeholder="Input your id">
+        </div>
+    </section>
     <section class="flex anaround">
         <div class="tabelbox">
             <div class="pendbox">
@@ -107,13 +107,29 @@ $conn->close();
                         </tr>
                     </thead>
                     <tbody id="app">
-                       
+
 
                     </tbody>
                 </table>
             </div>
         </div>
     </section>
+
+
+
+    <section class="flex anaround" style="height: 100vh; width: 100%; background-color: #fff; position: fixed; top: 0;">
+        <div><br><br><br><br>
+            <div class="popup">
+                <center>
+                    <h2>Upload Profile photo</h2>
+                </center>
+                <form action="upload.php" method="post">
+                    <input class="false" type="text" name="imgname" value="<?php echo $row['img']?>">
+                </form>
+            </div>
+        </div>
+    </section>
+
 
 
 
