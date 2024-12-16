@@ -18,6 +18,7 @@ async function displayData(searchInput = "") {
                                 <td>${item.code}</td>
                                 <td>${item.price}</td>
                                 <td>${item.updatex}</td>
+                                <td><a target='_blank' href="https://${item.code}.fxexchangerate.com/bdt/">Link</a></td>
                             </tr>
             `;
             dataContainer.appendChild(itemElement);
