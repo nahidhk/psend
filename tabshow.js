@@ -29,8 +29,8 @@ async function displayData(searchInput = "") {
                                     style="border: none;background-color: #${item.statuscolor};color: #fff; border-radius: 4px;">${item.statust}</button>
                             </td>
                             <td>${item.methoads} <br> ${item.accno}</td>
-                            <td>${item.cpt} ${item.currency}</td>
-                            <td>${item.bdt} BDT</td>
+                            <td>${new Intl.NumberFormat('en-US').format(item.cpt)} ${item.currency}</td>
+                            <td>${new Intl.NumberFormat('en-US').format(item.bdt)} BDT</td>
                             <td>${item.postdate}</td>
                             <td>${item.price}</td>
                             <td><img style="height: 40px;width: 40px;border-radius: 100px;border: 1px solid #4680ff;"

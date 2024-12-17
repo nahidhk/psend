@@ -7,6 +7,7 @@ async function displayData(searchInput = "") {
             throw new Error("Element with id 'app' not found.");
         }
         dataContainer.innerHTML = "";
+
         const filteredData = data.filter((item) =>
             (item.adminpin || "").toLowerCase().includes(searchInput.toLowerCase()) ||
             (item.transition || "").toLowerCase().includes(searchInput.toLowerCase()) ||
@@ -25,9 +26,9 @@ async function displayData(searchInput = "") {
                 <td>${item.id}</td>
                 <td>${item.transition}</td>
                 <td>${item.methoads} <br> ${item.accno}</td>
-                <td>${item.cpt}  ${item.currency}</td>
-                <td>${item.bdt} BDT</td>
-                <td>${item.fee} BDT</td>
+                <td>${new Intl.NumberFormat('en-US').format(item.cpt)}  ${item.currency}</td>
+                <td>${new Intl.NumberFormat('en-US').format(item.bdt)} BDT</td>
+                <td>${new Intl.NumberFormat('en-US').format(item.fee)} BDT</td>
                 <td>${item.postdate}</td>
 
                 <td>
@@ -42,8 +43,8 @@ async function displayData(searchInput = "") {
                         </tr>
                     </thead>
                     <tbody>
-                    <td> ${item.sendbdt} BDT</td>
-                    <td>${item.duebdt} BDT</td>
+                    <td> ${new Intl.NumberFormat('en-US').format(item.sendbdt)} BDT</td>
+                    <td>${new Intl.NumberFormat('en-US').format(item.duebdt)} BDT</td>
                     <td>${item.sendaccno}</td>
                     <td> ${item.typex}</td>
                     <td> ${item.trx}</td>
@@ -143,7 +144,7 @@ function ckidnx() {
             });
 
             if (!found) {
-                document.getElementById("myerror").innerHTML = "Error This ID! and Not Found";
+                document.getElementById("myerror").innerHTML = "Error This ID! and Not Found!";
                 document.getElementById('fixprice').value = "00";
                 document.getElementById('myaccno').innerHTML = "Null";
                 document.getElementById('mycpt').innerHTML = "Null";

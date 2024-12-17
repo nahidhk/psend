@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>the cal app :: psend :: admin</title>
+</head>
+
+<body>
+    <nav class="nav">
+        <br>
+        <div class="flex anaround">
+            <span class="navtext">Admins commission Book</span>
+        </div>
+    </nav>
+    <!--  The all counter Account   -->
+    <br><br><br><br>
+    <section class="flex anaround">
+        <div>
+            <div onclick="document.getElementById('popup').style.display='block'"
+                style="background-color: #4680ff; text-align: center;" class="btn"><i
+                    class="fa-solid fa-comments-dollar"></i> Payments</div>
+            <input oninput="searchData()" id="search1" class="false" type="text" placeholder="search by all data">
+            <select class="input" onchange="searchData()" name="" id="search">
+                <option value="">All</option>
+            </select>
+        </div>
+    </section>
+
+
+    <section class="flex anaround">
+        <div style="width: 95%;">
+            <div class="pendbox">
+                <center>
+                    Commission List
+                </center>
+            </div>
+            <div style="overflow: scroll;">
+                <table class="minimalistBlack">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>T.ID</th>
+                            <th>Date</th>
+                            <th>BDT</th>
+                            <th>Fees</th>
+                            <th>Exta Eran</th>
+                            <th>50%</th>
+
+                        </tr>
+                    </thead>
+                    <tbody id="app">
+                    </tbody>
+                    <tfoot style="background-color: rgb(236, 236, 236);">
+                        <tr id="totals">
+                            
+                        </tr>
+                    </tfoot>
+                </table>
+           
+            </div>
+            <div class="tabtag" id="logger">
+
+                
+            </div>
+        </div>
+    </section>
+    <script src="cals.js"></script>
+</body>
+
+</html>

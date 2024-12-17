@@ -243,3 +243,8 @@ select {
 }
 
 /* tanasforam */
+
+.tabtag{
+    border: 1px dashed #000;
+font-size: 21pt;
+}
