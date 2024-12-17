@@ -23,12 +23,9 @@ if ($result->num_rows > 0) {
     echo "<script>alert('Error: Invalid PIN'); window.location.href='login.php';</script>";
     exit;
 }
-
 $stmt->close();
 $conn->close();
 ?>
-
-
 <head>
     <link rel="shortcut icon" href="/img/Psend Logo.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
@@ -36,7 +33,6 @@ $conn->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Psend</title>
 </head>
-
 <body>
     <!-- Psend mobile nav -->
     <div class="nav flex beet">
@@ -58,7 +54,6 @@ $conn->close();
             <span style="color: #468;border: 1px solid red;" id="liveDateTime"></span>
         </h3>
     </center>
-
     <section class="flex center">
         <div class="boxdz">
             <center>
@@ -78,11 +73,11 @@ $conn->close();
         <button id="shbtn">
             Loadding...
         </button>
-
     </section>
     <section class="flex anaround">
         <div>
-            <input class="input" oninput="searchData()" type="search" id="search" placeholder="Input your id">
+            <input class="input" oninput="searchData()" type="search" id="search" placeholder="Input your id"> &nbsp;
+            <span onclick="window.location.href='/invoice/id/'" style="padding: 5px;  border: 1px solid #4680ff; background-color: #f306b8; border-radius: 4px; color: #fff;cursor: pointer;"><i class="fa-solid fa-magnifying-glass"></i></span>
         </div>
     </section>
     <section class="flex anaround">
@@ -107,32 +102,30 @@ $conn->close();
                         </tr>
                     </thead>
                     <tbody id="app">
-
-
                     </tbody>
                 </table>
             </div>
         </div>
     </section>
-
-
-
-    <section class="flex anaround" style="height: 100vh; width: 100%; background-color: #fff; position: fixed; top: 0;">
+    <section class="flex anaround <?php echo $row['diso'] ?>" style=" height: 100vh; width: 100%; background-color: #fff; position: fixed; top: 0;">
         <div><br><br><br><br>
             <div class="popup">
                 <center>
                     <h2>Upload Profile photo</h2>
                 </center>
-                <form action="upload.php" method="post">
-                    <input class="false" type="text" name="imgname" value="<?php echo $row['img']?>">
+                <form id="frrom" action="upload.php?id=<?php echo $row['id'] ?>" method="post" enctype="multipart/form-data">
+                    <input class="false" type="text" name="imgname" value="<?php echo $row['img'] ?>">
+                    <input oninput="submitfrm()" type="file" class="input" name="image" accept="image/*">
+                </form>
+                <script>
+                    function submitfrm() {
+                        document.getElementById('frrom').submit();
+                    }
+                </script>
                 </form>
             </div>
         </div>
     </section>
-
-
-
-
     <!-- js  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/js/all.min.js"
         integrity="sha512-1JkMy1LR9bTo3psH+H4SV5bO2dFylgOy+UJhMus1zF4VEFuZVu5lsi4I6iIndE4N9p01z1554ZDcvMSjMaqCBQ=="

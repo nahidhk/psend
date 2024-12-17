@@ -29,9 +29,28 @@ async function displayData(searchInput = "") {
                 <td>${item.bdt} BDT</td>
                 <td>${item.fee} BDT</td>
                 <td>${item.postdate}</td>
-                <td>send BDT : ${item.sendbdt} BDT <br> Due BDT : ${item.duebdt} BDT <br> send acc no : ${item.sendaccno} <br> type :
-                    ${item.typex} <br> t.id : ${item.trx}
+
+                <td>
+                  <table class="minimalistBlack">
+                    <thead>
+                        <tr>
+                        <th>send BDT</th>
+                        <th>Due BDT</th>
+                        <th>send acc no</th>
+                        <th> Type</th>
+                        <th>T.id</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <td> ${item.sendbdt} BDT</td>
+                    <td>${item.duebdt} BDT</td>
+                    <td>${item.sendaccno}</td>
+                    <td> ${item.typex}</td>
+                    <td> ${item.trx}</td>
+                    </tbody>
+                    </table>
                 </td>
+
                 <td >
                     <div style="display: flex;">
                         <div>
@@ -54,8 +73,8 @@ async function displayData(searchInput = "") {
                     <div onclick="window.location.href='/admin/dis.php?id=${item.id}'" style="background-color: #be3735;" class="btn"><i class="fa-solid fa-ban"></i></div>
                    </div> 
                 </td>
-            `;  
-            
+            `;
+
             dataContainer.appendChild(itemElement);
         });
     } catch (error) {
@@ -142,3 +161,4 @@ function ckidnx() {
             console.log("Error:", error);
         });
 }
+

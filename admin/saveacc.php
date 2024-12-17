@@ -11,7 +11,7 @@ $stmt = $conn->prepare($sql);
 if ($stmt) {
     $stmt->bind_param("dsdssi", $sendbdt, $sendaccno, $duebdt, $trx, $typex, $id);
     if ($stmt->execute()) {
-        echo "Record updated successfully";
+        echo "";
     } else {
         echo "Error updating record: " . $stmt->error;
     }
@@ -21,3 +21,4 @@ if ($stmt) {
 }
 mysqli_close($conn);
 ?>
+<script>window.location.href='/admin/admin.html'</script>
