@@ -59,8 +59,7 @@ async function displayData(searchInput = "") {
                         </div>
                         <div>
                            Name: ${item.adminname} <br>
-                           Code : ${item.adminpin} <br>
-                          <br>
+                           Code : ${item.adminpin} <br> 
                            Post :${item.postdate} 
                         </div>
                     </div>
@@ -69,7 +68,7 @@ async function displayData(searchInput = "") {
                    <div style="display: flex; justify-content: space-around;">
                     <div style="background-color:#${item.statuscolor};" class="btn">${item.statust}..</div>
                     <div onclick="window.location.href='/admin/c.php?id=${item.id}'" style="background-color: #ff1410;" class="btn"><i class="fa-solid fa-xmark"></i></div>
-                    <div onclick="window.location.href='/admin/verif.php?id=${item.id}'" style="background-color: #4680ff;" class="btn" ><i class="fa-solid fa-check"></i></div>
+                    <div onclick="window.location.href='/admin/verif.php?id=${item.id}&bdt=${item.bdt}&cpt=${item.cpt}&code=${item.currency}&adminpin=${item.adminpin}'" style="background-color: #4680ff;" class="btn" ><i class="fa-solid fa-check"></i></div>
                     <div onclick="const pass = prompt('Enter the id'); alert('Input The ID:'+pass); alert('Delete the ID : ${item.id}'); if(pass === '${item.id}'){window.location.href='/admin/d.php?id=${item.id}'}else{alert('Error The ID')}" style="background-color: #ff0400;" class="btn"><i class="fa-solid fa-trash-can"></i></div>
                     <div onclick="window.location.href='/admin/dis.php?id=${item.id}'" style="background-color: #be3735;" class="btn"><i class="fa-solid fa-ban"></i></div>
                    </div> 
