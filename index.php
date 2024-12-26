@@ -17,7 +17,7 @@ if ($result->num_rows > 0) {
 
 $conn->close();
 ?>
-<!-- Change the ui mobel -->
+<!-- Change the ui mobe -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,55 +25,22 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login || Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .popup {
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            text-align: center;
-        }
-        .input {
-            width: 80%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .btnlg {
-            padding: 10px 20px;
-            background: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .btnlg:hover {
-            background: #0056b3;
-        }
-        .error {
-            color: red;
-            font-size: 14px;
-        }
-    </style>
+    
 </head>
 <body>
-    <div class="popup">
+    <section class="flex center">
+    <div class="mbui">
+        <br><br><br><br>
+       <div class="flex anaround">
+        <div class="center txcenter">
+            <img src="/img/Psend Logo.png" alt="" class="logimg">
         <h3>Login</h3>
         <form id="djfrm" action="" method="post">
             <input id="pin" class="input" type="number" name="pin" placeholder="Input your PIN" required><br>
             <button type="submit" class="btnlg">Login</button>
         </form>
+        </div>
+       </div>
         <?php
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $inputPin = $_POST['pin'] ?? null;
@@ -88,11 +55,12 @@ $conn->close();
             }
         }
         ?>
-
+<br><br><br>
         <?php if (isset($error)): ?>
             <p class="error"><?= $error ?></p>
         <?php endif; ?>
     </div>
+    </section>
 
     <script>
       

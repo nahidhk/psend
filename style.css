@@ -4,6 +4,7 @@ body {
     font-family: "Parkinsans", sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #dfdede;
 }
 
 button,
@@ -248,3 +249,38 @@ select {
     border: 1px dashed #000;
 font-size: 21pt;
 }
+.center{
+    justify-content: center;
+}
+.mbui{
+    width: 360px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+.cmbui{
+    width: 360px;  
+}
+.txcenter{
+    text-align: center;
+}
+.logimg{
+    height: 150px;
+    width: 150px;
+    border-radius: 100px;
+    border: 1px solid #4680ff;
+}
+.bottomnav{
+    height: 60px;
+    width: 100%;
+    background-color: #e8e6e8;
+    position: fixed;
+    bottom: 0;
+    z-index: 999;
+}
+.nvbtn{
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+
+}
+
+/* Add The mobile UI in this app */

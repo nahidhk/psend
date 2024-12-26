@@ -34,19 +34,28 @@ $conn->close();
     <title>Psend</title>
 </head>
 <body>
+
+
+<!-- add the the mobile mobile apk run nav  -->
+ 
     <!-- Psend mobile nav -->
-    <div class="nav flex beet">
-        <div>
-            <blockquote class="flex">
-                <span class="navtext">Psend - </span><span><?php echo $row['name'] ?></span>
-            </blockquote>
-        </div>
-        <div>
+    <div class="nav flex center">
+        <div class="cmbui flex anaround">
+            <div>
+                <h2>
+                    Psend 
+                </h2>
+            </div>
             <div class="cimg">
                 <img src="/img/<?php echo $row['img'] ?>" alt="Logo">
             </div>
         </div>
     </div>
+<!-- ui change and the add mobile version apk -->
+
+<section class="flex center">
+    <main class="mbui">
+
     <br><br><br>
     <center>
         <h3>
@@ -126,6 +135,23 @@ $conn->close();
             </div>
         </div>
     </section>
+     <!-- end the mobile ui -->
+     </main>
+     </section>
+
+       <!-- BOTTOM munu box and ppp.io box -->
+       <section class="bottomnav flex center">
+        <blockquote>
+        <div class="cmbui flex anaround">
+            
+            <div class="nvbtn">1</div>
+            <div class="nvbtn">2</div>
+            <div class="nvbtn">3</div>
+            <div class="nvbtn">4</div>
+            
+        </div>
+        </blockquote>
+        </section>
     <!-- js  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/js/all.min.js"
         integrity="sha512-1JkMy1LR9bTo3psH+H4SV5bO2dFylgOy+UJhMus1zF4VEFuZVu5lsi4I6iIndE4N9p01z1554ZDcvMSjMaqCBQ=="
