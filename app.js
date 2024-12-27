@@ -31,18 +31,22 @@ function opencountry() {
         document.getElementById("countryshow").innerHTML = countryName;
         document.getElementById('setloc').value = countryName;
         thisunpkg(countryName);
-        const shbtn = document.getElementById('shbtn');
-        shbtn.addEventListener("click", sendio);
-        shbtn.className = "btnlg";
-        shbtn.innerHTML = `Tap To Send <i class="fa-regular fa-paper-plane"></i>`;
+        document.getElementById('loader').style.display = 'none';
         mydata()
-
       },
       (error) => {
         var nowshow = document.getElementById("countryshow");
         nowshow.innerHTML = `Allow getting location! `, error;
-        alert("Error Allow getting location!\n Go Back And Try agin!")
-        window.location.href='/';
+        if (confirm('You just Block your Location\n press "OK" to Ask Location!')) {
+          if (alert('Unblock the Location!')) {
+            opencountry();
+          } else {
+            window.location.href = "/";
+
+          }
+        } else {
+          window.location.href = "/";
+        }
         sessionStorage.clear();
       }
     );
@@ -125,3 +129,5 @@ function mydata() {
 function sendio() {
   window.location.href = 'psend.html'
 }
+
+

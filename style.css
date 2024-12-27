@@ -23,7 +23,7 @@ input:focus {
     height: 70px;
     width: 100%;
     background-color: #468;
-    position: fixed;
+    position: sticky;
     top: 0;
     color: #fff;
 }
@@ -235,6 +235,7 @@ select {
     position: fixed;
     top: 0;
     backdrop-filter: blur(8px);
+    z-index: 999;
 }
 
 .btng {
@@ -275,7 +276,7 @@ font-size: 21pt;
     background-color: #e8e6e8;
     position: fixed;
     bottom: 0;
-    z-index: 999;
+    z-index: 900;
 }
 .nvbtn{
     font-size: 20pt;
@@ -289,6 +290,21 @@ font-size: 21pt;
 .activez{
    color: #4680ff;
 }
+.getpopup{
+    height: auto;
+    width: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.list{
+    height: auto;
+    padding: 10px;
+    background-color:#fff ;
+    border-bottom: 1px solid #4680ff;
+    font-size: 16pt;
+}
 /* Add The mobile UI in this app */
 
 @media screen and (max-width: 600px) {
@@ -298,8 +314,7 @@ font-size: 21pt;
         background-color: #fff;
     }
     .cmbui{
-        width: 100%;
-        background-color: red;  
+        width: 100%; 
     }
     body{
         background-color: #fff;

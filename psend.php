@@ -75,6 +75,7 @@
         </div>
         </div>
     </section>
+    <br><br><br><br><br>
     <?php include 'bottom.php'; ?>
     <script src="login.js"></script>
     <script src="psend.js"></script>

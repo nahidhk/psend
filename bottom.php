@@ -6,6 +6,7 @@
             <div onclick="clickbtmbtn('psend')" id="psend" class="nvbtn"><i class="fa-solid fa-paper-plane"></i></div>
             <div onclick="clickbtmbtn('list')" id="list" class="nvbtn"><i class="fa-solid fa-hand-holding-dollar"></i></div>
             <div onclick="clickbtmbtn('history')" id="history" class="nvbtn"><i class="fa-solid fa-clock-rotate-left"></i></div>
+            <div onclick="clickbtmbtn('invoice')" id="invoice" class="nvbtn"><i class="fa-solid fa-comments-dollar"></i></div>
             <div onclick="clickbtmbtn('user')" id="user" class="nvbtn"><i class="fa-solid fa-user"></i></div>
             
         </div>

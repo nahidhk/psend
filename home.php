@@ -34,7 +34,12 @@ $conn->close();
     <title>Psend</title>
 </head>
 <body>
-
+<!-- this is a loading popup -->
+<section id="loader" class="darkside">
+    <div class="getpopup ">
+            <h1><span style="font-size:40pt; color:#fff" class="fa-solid fa-atom fa-spin"></span></h1>
+    </div>
+</section>
 
 <!-- add the the mobile mobile apk run nav  -->
  
@@ -56,10 +61,10 @@ $conn->close();
 <section class="flex center">
     <main class="mbui">
 
-    <br><br><br>
+    
     <center>
         <h3>
-            <span id="showflag"></span><br><span id="countryshow">Loadding...</span><br>
+            <span id="showflag"></span><br><span id="countryshow"><i class="nvbtn fa-solid fa-atom fa-spin"></i></span><br>
             <span style="color: #468;border: 1px solid red;" id="liveDateTime"></span>
         </h3>
     </center>
@@ -78,15 +83,10 @@ $conn->close();
         </div>
     </section>
     <br>
-    <section style="height: 50px;" class="flex anaround">
-        <button id="shbtn">
-            Loadding...
-        </button>
-    </section>
+   
     <section class="flex anaround">
         <div>
             <input class="input" oninput="searchData()" type="search" id="search" placeholder="Input your id"> &nbsp;
-            <span onclick="window.location.href='/invoice/id/'" style="padding: 5px;  border: 1px solid #4680ff; background-color: #f306b8; border-radius: 4px; color: #fff;cursor: pointer;"><i class="fa-solid fa-magnifying-glass"></i></span>
         </div>
     </section>
     <section class="flex anaround">
@@ -138,6 +138,7 @@ $conn->close();
      <!-- end the mobile ui -->
      </main>
      </section>
+     <br><br><br>
 <?php include("bottom.php"); ?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/js/all.min.js"
         integrity="sha512-1JkMy1LR9bTo3psH+H4SV5bO2dFylgOy+UJhMus1zF4VEFuZVu5lsi4I6iIndE4N9p01z1554ZDcvMSjMaqCBQ=="

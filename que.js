@@ -6,7 +6,6 @@ function clickbtmbtn(clickdata) {
 }
 function getclickdata() {
     const getclick = sessionStorage.getItem("activez");
-    if (getclick) {
-        clickbtmbtn(getclick);
-    }
+    document.getElementById(getclick).classList.add("activez");
 }
+getclickdata();
