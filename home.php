@@ -138,24 +138,11 @@ $conn->close();
      <!-- end the mobile ui -->
      </main>
      </section>
-
-       <!-- BOTTOM munu box and ppp.io box -->
-       <section class="bottomnav flex center">
-        <blockquote>
-        <div class="cmbui flex anaround">
-            
-            <div class="nvbtn">1</div>
-            <div class="nvbtn">2</div>
-            <div class="nvbtn">3</div>
-            <div class="nvbtn">4</div>
-            
-        </div>
-        </blockquote>
-        </section>
-    <!-- js  -->
+<?php include("bottom.php"); ?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/js/all.min.js"
         integrity="sha512-1JkMy1LR9bTo3psH+H4SV5bO2dFylgOy+UJhMus1zF4VEFuZVu5lsi4I6iIndE4N9p01z1554ZDcvMSjMaqCBQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="que.js"></script>
     <script src="app.js"></script>
     <script src="login.js"></script>
     <script src="tabshow.js"></script>

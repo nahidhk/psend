@@ -278,9 +278,30 @@ font-size: 21pt;
     z-index: 999;
 }
 .nvbtn{
-    background-color: rgb(255, 255, 255);
-    padding: 5px;
-
+    font-size: 20pt;
 }
-
+.rd{
+    background-color: rgba(255, 0, 0, 0);
+    width: 100%;
+    height: 40px;
+    margin: 10px;
+}
+.activez{
+   color: #4680ff;
+}
 /* Add The mobile UI in this app */
+
+@media screen and (max-width: 600px) {
+    .mbui{
+        width: 100%;
+        border-radius: 0;
+        background-color: #fff;
+    }
+    .cmbui{
+        width: 100%;
+        background-color: red;  
+    }
+    body{
+        background-color: #fff;
+    }
+  }
