@@ -1,6 +1,12 @@
 <?php
-$tid = $_GET['id'];
+$oid = $_GET['id'];
 
+if (empty($oid)) {
+    echo "<script>window.location.href='/invoice/id';</script>";
+    exit;
+} else {
+    $tid = $oid;
+}
 require_once('../config.php');
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {

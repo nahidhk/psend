@@ -76,7 +76,7 @@
         </div>
     </section>
     <br><br><br><br><br>
-    <?php include 'bottom.php'; ?>
+    <?php require_once('bottom.php') ?>
     <script src="login.js"></script>
     <script src="psend.js"></script>
     <script src="too.js"></script>

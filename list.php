@@ -10,18 +10,20 @@
 </head>
 
 <body>
-    <section class="mbui">
-        <br>
-        <div>
-            <blockquote>
-                <h3>Today Price List</h3>
-                <hr>
-                <div id="showlist">
+    <div class="flex center">
+        <section class="mbui">
+            <br>
+            <div>
+                <blockquote>
+                    <h3>Today Price List</h3>
+                    <hr>
+                    <div id="showlist">
 
-                </div>
-            </blockquote>
-        </div>
-    </section>
+                    </div>
+                </blockquote>
+            </div>
+        </section>
+    </div>
     <?php require_once("bottom.php") ?>
     <script src="showlist.js"></script>
 </body>

@@ -10,15 +10,23 @@
 </head>
 
 <body>
+    
+            <button onclick="window.history.back();" style="color:red" class="btn">
+                Go Back
+            </button>
+    
+    </div>
     <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50% , -50%) ;" class="popup">
         <Center>
             <h2>Search!</h2>
             <form action="/invoice/" method="get">
-            <input value="<?php echo $tid ?>" class="input" type="search" name="id" id="" placeholder="input the Invoce ID">
+            <input value="<?php echo $tid ?>" class="input" type="search" name="id" id="" placeholder="input the Invoce ID" required>
             <button class="btnlg">Search</button>
             </form>
         </Center>
     </div>
+
+    
 </body>
 
 </html>
