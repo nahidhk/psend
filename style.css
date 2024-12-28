@@ -305,6 +305,14 @@ font-size: 21pt;
     border-bottom: 1px solid #4680ff;
     font-size: 16pt;
 }
+.imgbr{
+    height: 30px;
+    width: 30px;
+    border-radius: 100px;
+    border: 1px solid #4680ff;
+    margin: 0;
+}
+.red{background-color: red;}
 /* Add The mobile UI in this app */
 
 @media screen and (max-width: 600px) {
